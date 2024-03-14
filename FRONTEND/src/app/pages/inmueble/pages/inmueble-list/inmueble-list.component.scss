@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  &__content {
+    min-height: 150px;
+  }
+}
+
+.card-item {
+  padding: 3px 3px 3px 3px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  display: flex;
+  padding: 1rem;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+mat-card img {
+  object-fit: cover;
+  width: 400px;
+  height: 60%;
+}
