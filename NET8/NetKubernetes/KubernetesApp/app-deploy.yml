@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app-deploy
+  namespace: app
   labels:
     name: app-deploy
     app: app
@@ -14,6 +15,7 @@ spec:
   template:
     metadata:
       name: app-pod
+      namespace: app
       labels:
         name: app
         type: netapi

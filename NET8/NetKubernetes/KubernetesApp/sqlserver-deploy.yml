@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mssql-deploy
+  namespace: app
   labels:
     name: mssql-deploy
     app: app
@@ -14,6 +15,7 @@ spec:
   template:
     metadata:
       name: mssql-pod
+      namespace: app
       labels:
         app: app
         name: mssql-pod
