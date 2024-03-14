@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mssql-service
+  labels:
+    name: mssql-service
+    app: app
+spec:
+  type: LoadBalancer
+  selector:
+    app: app
+    name: mssql-pod
+  ports:
+  - port: 1433
+    targetPort: 1433

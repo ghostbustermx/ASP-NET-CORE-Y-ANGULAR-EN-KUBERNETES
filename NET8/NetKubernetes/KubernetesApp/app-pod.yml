@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-pod
+  labels:
+    name: app
+    type: netapi
+spec:
+  containers:
+  - name: app-api
+    image: cazamx/net-kubernetes-gman:v1.0
+    ports:
+      - containerPort: 5000
+    env:
+      - name: ConnectionStrings__SQLServerConnection
+        value: Data Source=mssql-service; Initial Catalog=InmuebleDB; User Id=sa; Password=CazaMx2025$; Trust Server Certificate=true  
